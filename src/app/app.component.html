@@ -1,0 +1,167 @@
+<body>
+  <div *ngIf="controlVisible" align="center">
+    <mat-form-field>
+      <input matInput color="accent" placeholder="Escribe tú nombre" [formControl]="nameField" type="text">
+    </mat-form-field>
+    <button mat-flat-button color="accent" [disabled]="nameField.invalid" (click)="changeVisible()"> Ver </button>
+
+    <!--   girl2  !-->
+
+    <div class="girl2container">
+      <div class="girl2profile">
+        <div class="girl2group">
+          <div class="girl2hair"></div>
+          <div class="girl2ear"></div>
+          <div class="girl2ear right"></div>
+          <div class="girl2fringe"></div>
+          <div class="girl2face"></div>
+          <div class="girl2eyebrow"></div>
+          <div class="girl2eye"></div>
+          <div class="girl2blush"></div>
+          <div class="girl2nose"></div>
+          <div class="girl2mouth">
+            <div class="girl2tongue"></div>
+          </div>
+          <div class="girl2neck"></div>
+          <div class="girl2body">
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div *ngIf="visible">
+    <div class="dark fadeOut"></div>
+    <div class="sun slideIn"></div>
+    <h1 class="fadeIn">Feliz día de la madre</h1>
+    <section class="flowers">
+      <div class="flower">
+        <div class="flower_head pulse"></div>
+        <div class="flower_stem grow-12"></div>
+      </div>
+      <div class="flower">
+        <div class="flower_head pulse pink"></div>
+        <div class="flower_stem grow-15"></div>
+      </div>
+      <!-- <div class="flower">
+      <div class="flower_head pulse yellow"></div>
+      <div class="flower_stem grow-9"></div>
+    </div>-->
+      <!--Other-->
+      <!--  <div class="wrapper">
+      <h1 class="logo">
+        <span class="heart"></span>
+      </h1>
+    </div>-->
+
+      <!--Other-->
+      <div class="container">
+        <div class="glass">
+          <div class="shine"></div>
+        </div>
+        <div class="thorns">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="leaves">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="petals">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="deadPetals">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+    </section>
+
+    <h2 class="fadeIn delay-1">{{nameField.value}}</h2>
+    <!--
+    girl
+  -->
+    <div class="girlcontainer" onmouseover="makeVisible">
+      <div class="girlheart"></div>
+      <div class="girlavatar-ponytail"></div>
+      <div class="girlavatar-body">
+        <div class="girlshirt-button"></div>
+        <div class="girlheart-button">
+          <p></p>
+        </div>
+      </div>
+      <div class="girlavatar-hair"></div>
+      <div class="girlavatar-head"></div>
+      <div class="girlavatar-neck"></div>
+      <div class="girlavatar-face">
+        <div class="girleyes"></div>
+        <div class="girlglasses">
+          <div class="girlleft">
+            <div class="girlshine"></div>
+          </div>
+          <div class="girlright">
+            <div class="girlshine"></div>
+          </div>
+        </div>
+        <div class="girlcheeks"></div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="controlVisible" align="center" class="references">
+    Implemented by Cristian Mejia 
+    <a href="https://github.com/cristianm009">Github</a>  - 
+    <a href="https://www.linkedin.com/in/cristian-alveiro-mejia-obando-2b872b34/">Linkedin</a> - 
+    <a href="https://twitter.com/cristianm009">Twitter</a>
+   
+  </div>
+</body>
+
+<!--
+<div class="container" onmouseover="makeVisible">
+  <div class="heart"></div>
+    <div class="avatar-ponytail"></div>
+    <div class="avatar-body">
+      <div class="shirt-button"></div>
+      <div class="heart-button"></div>
+    </div>
+    <div class="avatar-hair"></div>
+    <div class="avatar-head"></div>
+    <div class="avatar-neck"></div>
+    <div class="avatar-face">
+      <div class="eyes"></div>
+      <div class="glasses">
+        <div class="left">
+          <div class="shine"></div>
+        </div>
+        <div class="right">
+          <div class="shine"></div>
+        </div>
+      </div>
+      <div class="cheeks"></div>
+    </div>
+</div>
+-->
+
+<!--
+other
+-->
+
+<!--
+<section>
+  <div *ngIf="visible" class="footer">
+    <button mat-flat-button color="accent" (click)="changeControlVisible()"> Refrescar </button>
+
+  </div>
+</section>-->

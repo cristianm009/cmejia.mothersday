@@ -1,0 +1,1138 @@
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+
+$blue: #45b9d3; //rgba(69, 185, 211, 100)
+$darkgreen: #4d916e; //rgba(77, 145, 110, 100)
+$lightgreen: #86af6e; //rgba(134, 175, 110, 100)
+$pink: #e2b1b1; //rgba(226, 177, 177, 100)
+$purple: #cba8ed; //rgba(203, 168, 237, 100)
+$backgroundfull:#b922a0;
+
+.references{
+    position: absolute;
+    bottom: 0;
+    font-size: medium;
+    font-family: Cascadia Code;
+    color: black;
+    margin: auto;
+    border: 3px solid white;
+    padding: 10px;
+}
+
+* {
+  // border: 2px solid red;
+}
+
+.dark {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  background: hsla(250, 35, 15, 0.9);
+  z-index: 5000;
+}
+
+h1, h2 {
+  position: relative;
+  text-align: center;
+  font-family: 'Poiret One', cursive;
+  text-shadow: 1px 1px 1px hsla(100, 0, 30, 0.5);
+  z-index: 1000;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 4.5rem;
+  font-size: 8vw;
+}
+
+h2 {
+  font-size: 6vw;
+}
+
+.sun {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 3rem;
+  height: 3rem;
+  background: khaki;
+  border-radius: 100%;
+  box-shadow: 0 0 20px khaki;
+  
+}
+
+.flowers {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.flower {
+  // position: absolute;
+  // top: 10rem;
+  // left: 10rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &_head {   
+    height:7rem;
+    width: 7rem;
+    background: $purple;
+    border-radius: 100%;  
+  }
+  
+  &_stem {
+    width: 0.5rem;
+    //flex: 0 0 4rem;
+    height: 20rem;
+    max-height: 0;
+    background: $lightgreen;
+    
+    &::after {
+      content: '';
+      margin-left: 0.5rem;
+      margin-top: 1rem;
+      width: 3em;
+      height: 3em;
+      display: block;
+      background: $darkgreen;
+      border-radius: 2em 0 2em 0em;
+    }
+  }
+}
+
+.yellow {
+  width: 7.5rem;
+  height: 7.5rem;
+  background: khaki;
+  position: absolute;
+}
+
+.pink {
+  width: 6rem;
+  height: 6rem;
+  background: $pink;
+}
+
+.fadeIn {
+  opacity: 0;
+  animation: fadeIn 1s 2s ease-in forwards;
+}
+
+.slideIn {
+  transform: translateX(-5rem);
+  animation: slideIn 3s ease-out forwards;
+}
+
+.fadeOut {
+  opacity: 1;
+  animation: fadeOut 4s .25s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 3s;
+}
+
+.grow-12 {
+  animation: grow-12 2s 0.5s ease-in-out forwards;
+}
+
+.grow-15 {
+  animation: grow-15 2s 1.5s ease-in-out forwards;
+}
+
+.grow-9 {
+  animation: grow-9 2s 2.5s ease-in-out forwards;
+}
+
+.pulse {
+  animation: pulse 1s 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes fadeIn {
+  100% { opacity: 1; }
+}
+
+@keyframes slideIn {
+  100% { transform: translateX(0); }
+}
+
+@keyframes fadeOut {
+  100% { opacity: 0; }
+}
+
+@keyframes grow-12 {
+  100% { max-height: 14rem; }
+}
+
+@keyframes grow-15 {
+  100% { max-height: 17rem; }
+}
+
+@keyframes grow-9 {
+  100% { max-height: 11rem; }
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1.0); }
+  100% { transform: scale(1.1); }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.777rem;
+  }
+  h2 {
+    font-size : 1.777rem;
+  }
+}
+//other
+/*
+ .heart {
+    background-color: red;
+    display: inline-block;
+    height: 50px;
+    margin: 0 10px;
+    position: relative;
+    top: 0;
+    transform: rotate(-45deg);
+    position: absolute; 
+    left: 45%; top: 45%;
+    width: 50px;
+  }
+  
+  .heart:before,
+  .heart:after {
+    content: "";
+    background-color: red;
+    border-radius: 50%;
+    height: 50px;
+    position: absolute;
+    width: 50px;
+  }
+  
+  .heart:before {
+    top: -25px;
+    left: 0;
+  }
+  
+  .heart:after {
+    left: 25px;
+    top: 0;
+  }
+  @keyframes heartbeat {
+    0% {
+      transform: scale( 1 );    
+    }
+    20% {
+      transform: scale( 1.25 ) 
+        translateX(5%) 
+        translateY(5%);
+    } 
+    40% {
+      transform: scale( 1.5 ) 
+        translateX(9%) 
+        translateY(10%);
+    }
+  }
+  */
+  //glass container 
+  $bg:  darken(#122139, 8%);//#fffafa;
+$case: #122139;
+$casebase: #a52a2a;
+$pink1: #d52d58;
+$pink2: #9e183a;
+$pink3: #b81b43;
+$pink4: #c9204b;
+$green1: #338f37;
+$green2: darken(#066406, 5%);
+
+@mixin rotatePetal($i, $angle) {
+  @if ($i % 2 == 1) {
+    $angle: $angle * -1;
+  }
+  transform: rotate($angle + deg);
+}
+@function randomNum($min, $max) {
+  $rand: random();
+  $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+  @return $randomNum;
+}
+body {
+  height: 100%;
+  width: 100%;
+  background: $backgroundfull;
+  color: white;
+  overflow: hidden;
+}
+
+.container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.glass {
+  height: 350px;
+  width: 200px;
+  background: $case;
+  border-radius: 300px 300px 0px 0px;
+  &:before {
+    content: "";
+    height: 10px;
+    width: 10px;
+    transform-origin: center;
+    border: 10px solid $case;
+    border-radius: 100%;
+    position: absolute;
+    left: 87px;
+    top: -25px;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    height: 15px;
+    width: 250px;
+    background: $casebase;
+    top: 100%;
+    left: -13%;
+  }
+}
+.shine {
+  width: 12px;
+  height: 140px;
+  background: white;
+  opacity: 0.2;
+  position: absolute;
+  left: 85%;
+  top: 80px;
+  border-radius: 100px;
+  z-index: 10;
+  &:before {
+    content: "";
+    width: 12px;
+    height: 20px;
+    position: absolute;
+    background: white;
+    top: 160px;
+    border-radius: 100px;
+  }
+}
+.petals {
+  & > div {
+    position: absolute;
+    background: $pink1;
+    width: 45px;
+    height: 80px;
+    top: 55px;
+    transition: all 0.5s ease-out;
+  }
+  & > div:nth-child(1) {
+    border-radius: 15px;
+    box-shadow:  0px 0px 30px rgba(245, 148, 184, 1);
+    left: 80px;
+    top: 60px;
+    background: $pink1;
+  }
+  & > div:nth-child(2),
+  & > div:nth-child(4),
+  & > div:nth-child(6) {
+    background: $pink3;
+    left: 60px;
+    border-radius: 0px 30px 0px 30px;
+    transform-origin: bottom right;
+  }
+  & > div:nth-child(3),
+  & > div:nth-child(5),
+  & > div:nth-child(7) {
+    background: $pink3;
+    left: 100px;
+    border-radius: 30px 0px 30px 0px;
+    transform-origin: bottom left;
+  }
+  @for $i from 2 to 8 {
+    $background: "";
+    $top: "";
+    $h: "";
+    $box: "";
+    $angle: 30deg;
+    @if ($i == 2 or $i == 3) {
+      $background: lighten($pink2, 3%);
+      $top: 75px;
+      $h: 70px;
+      //@if ($i == 3) {
+      $box:  0px 0px 50px rgba(245, 148, 184, .5);
+      //}
+    }
+    @if ($i == 4 or $i == 5) {
+      $background: $pink3;
+      $top: 70px;
+      $h: 75px;
+      $box:  0px 0px 50px rgba(245, 148, 184, .5);
+    }
+    @if ($i == 6 or $i == 7) {
+      $background: $pink4;
+      $top: 65px;
+      $h: 70px;
+      $box:  0px 0px 50px rgba(245, 148, 184, .3);
+    }
+    & > div:nth-child(#{$i}) {
+      z-index: 7-$i;
+      background: $background;
+      top: $top;
+      height: $h;
+      box-shadow: $box;
+      @if ($i == 2) {
+        animation: bloom2 3s ease-in-out;
+      } @else {
+      animation: bloom+$i 3s ease-in-out, glowing 2.5s ease-in-out infinite;
+      }
+      animation-fill-mode: forwards;
+    }
+  }
+}
+.deadPetals {
+   & > div {
+    position: absolute;
+    background: $pink1;
+    width: 20px;
+    height: 15px;
+    top: 120px;
+    border-radius: 0px 30px 0px 30px;
+    box-shadow: 0px 0px 30px rgba(245, 148, 184, .5);
+    transition: all 0.5s ease-out;
+  }
+  @for $i from 1 to 5 {
+    & > div:nth-child(#{$i}) {
+     left: randomNum(60, 120)+px;
+     transform: rotate(-30deg);
+     animation: falling 20s $i*4s ease-in-out infinite;
+    }
+  }
+}
+.leaves {
+  & > div:nth-last-child(1) {
+    position: absolute;
+    width: 55px;
+    height: 30px;
+    background: $green1;
+    top: 120px;
+    left: 75px;
+    border-radius: 100px;
+
+  }
+  & > div:nth-child(1) {
+    position: absolute;
+    width: 6px;
+    height: 210px;
+    background: $green2;
+    top: 95px;
+    left: 100px;
+    border-radius: 0 0 100px 100px;
+  }
+  & > div:nth-child(2) {
+    position: absolute;
+    width: 30px;
+    height: 50px;
+    top: 53px;
+    border-radius: 5px 40px 20px 40px;
+    background: $green2;
+    transform-origin: bottom;
+    transform: rotate(-30deg);
+    top: 180px;
+    left: 80px;
+    box-shadow: inset 5px 5px lighten($green2, 5%);
+  }
+  & > div:nth-child(3) {
+    position: absolute;
+    width: 30px;
+    height: 50px; 
+    top: 53px;
+    border-radius: 40px 5px 40px 20px;
+    background: $green2;
+    transform-origin: bottom;
+    transform: rotate(30deg);
+    top: 150px;
+    left: 95px;
+    box-shadow: inset -5px 5px lighten($green2, 5%);
+  }
+}
+.thorns {
+  & > div {
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 140px;
+  }
+  & > div:nth-child(odd) {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid $green2;
+    left: 105px;
+  }
+  & > div:nth-child(even) {
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid $green2;
+    left: 95px;
+  }
+  & > div:nth-child(1) {
+    top: 200px;
+  }
+  & > div:nth-child(2) {
+    top: 170px;
+  }
+  & > div:nth-child(4) {
+    top: 230px;
+  }
+}
+
+@keyframes bloom2 {
+  50% {
+    transform: rotate(-90deg);
+    top: 200px;
+    left: 100px;
+  }
+  100% {
+    transform: rotate(-60deg);
+    top: 252px;
+    left: 50px;
+    background: darken($pink4, 20%);
+    box-shadow: 0px 0px 0px rgba(245, 148, 184, 0);
+  }
+}
+
+@keyframes bloom3 {
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes bloom4 {
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes bloom5 {
+  100% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes bloom6 {
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes bloom7 {
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes glowing {
+  50% {
+    background: lighten($pink1, 2%);
+      box-shadow: 0px 0px 60px rgba(245, 148, 184, 1);
+    }
+}
+
+@keyframes falling {
+  20% {
+    top: 335px;
+    background: darken($pink4, 10%);
+    box-shadow: 0px 0px 0px rgba(245, 148, 184, 0);
+  }
+  100% {
+    top: 335px;
+    opacity: 0;
+  }
+}
+.footer{
+    position:absolute;                  
+    bottom:0;                          
+    left:0; 
+}
+//girl
+$girlbackground: #020916;
+$girlcontainer: #5ab3b5; //#00ced1;
+$girlshirt: #b51231;
+$girlskin: #c74b16;
+.girlcontainer {
+    background: $girlcontainer;
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    transition: all 0.5s ease;
+    &:hover {
+      background: pink;
+      .girlcheeks {
+        &::before,
+        &::after {
+          background: darken($girlshirt, 10%);
+        }
+      }
+      .girlheart {
+        background: pink;
+        &:before,
+        &:after {
+          background: pink;
+        }
+      }
+      .girlshirt-button {
+        background: $girlshirt;
+      }
+      .girlheart-button {
+        z-index: 1;
+        color: white;
+        animation: pulse 1s 0.5s ease-out infinite;
+      }
+    }
+  }
+  
+  .girlcontainer {
+    width: 300px;
+    height: 300px;
+    background: $girlbackground;
+    position: absolute;
+    top: 30px;
+    z-index: -1;
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    &:before,
+    &:after {
+      content: "";
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      border-radius: 100%;
+      background: $girlbackground;
+      transition: all 0.5s ease;
+    }
+    &:before {
+      top: -150px;
+      left: 0;
+    }
+    &:after {
+      left: -150px;
+      top: 0;
+    }
+  }
+  .girlavatar-body {
+    width: 60px;
+    height: 30px;
+    background: $girlshirt;
+    position: absolute;
+    left: calc(50% - 30px);
+    top: 75%;
+    z-index: 2;
+    &:after {
+      content: "";
+      position: absolute;
+      border-bottom: 20px solid darken(white, 10%);
+      border-left: 20x solid transparent;
+      border-right: 15px solid transparent;
+      height: 0;
+      width: 22px;
+      right: calc(50% - 10px);
+      top: -20px;
+    }
+    &:before {
+      content: "";
+      position: absolute;
+      border-bottom: 20px solid darken(white, 20%);
+      border-left: 15px solid transparent;
+      border-right: 0px solid transparent;
+      height: 0;
+      width: 25px;
+      right: 2px;
+      top: -20px;
+    }
+  }
+  .girlshirt-button {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 100%;
+    left: calc(50% - 5px);
+    top: 10px;
+  }
+  .girlcontainer-button {
+    position: absolute;
+    color: $girlshirt;
+    font-size: 20px;
+    top: -15px;
+    left: 35%;
+    z-index: -1;
+  }
+  .girlavatar-head {
+    position: absolute;
+    z-index: 3;
+    width: 90px;
+    height: 120px;
+    background: $girlskin;
+    border-radius: 40px;
+    left: calc(50% - 45px);
+    top: 70px;
+  }
+  .girlavatar-neck {
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    background: $girlskin;
+    left: calc(50% - 20px);
+    top: 60%;
+    box-shadow: inset 0px 16px 0px 0px darken($girlskin, 10%);
+  }
+  .girlavatar-hair {
+    position: absolute;
+    width: 130px;
+    height: 130px;
+    background: $girlbackground;
+    border-radius: 100%;
+    left: calc(50% - 65px);
+    top: 12%;
+    box-shadow: inset 10px -1px lighten($girlbackground, 10%);
+    &:after {
+      content: "";
+      position: absolute;
+      width: 90px;
+      height: 50px;
+      background: $girlbackground;
+      border-radius: 0px 200px 0px 200px;
+      z-index: 4;
+      left: 40px;
+      top: 20px;
+      transform: rotate(10deg);
+    }
+  }
+  .girlavatar-ponytail {
+    width: 90px;
+    height: 120px;
+    position: absolute;
+    background: $girlbackground;
+    left: 25%;
+    top: 40%;
+    border-radius: 200px;
+    &:after {
+      content: "";
+      position: absolute;
+      width: 120px;
+      height: 70px;
+      background: $girlbackground;
+      border-radius: 0 0 300px 300px;
+      top: 60%;
+      right: -5%;
+    }
+  }
+  .girlavatar-face {
+    width: 500px;
+    height: 500px;
+    position: absolute;
+    left: calc(50% - 35px);
+    top: calc(50% - 50px);
+    z-index: 5;
+    .girleyes {
+      display: flex;
+      justify-content: space-between;
+      position: absolute;
+      top: 12px;
+      left: -7px;
+      &::before,
+      &::after {
+        display: inline-block;
+        content: "";
+        width: 15px;
+        height: 40px;
+        background: $girlbackground;
+        margin: 0 14px;
+        border-radius: 200px;
+        animation: blink 3s ease-in-out infinite;
+      }
+    }
+  
+    .girlglasses {
+      position: relative;
+      width: 5px;
+      height: 2px;
+      background: #f89714;
+      left: 6.5%;
+      top: 25px;
+      .girlleft {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: transparent;
+        border-radius: 100%;
+        border: 2px solid #f89714;
+        left: -52px;
+        top: -22px;
+        overflow: hidden;
+        z-index: 2;
+      }
+      .girlright {
+        @extend .girlleft;
+        left: 4px;
+      }
+    }
+  }
+  .girlshine {
+    position: absolute;
+    &:before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 100px;
+      background: white;
+      opacity: 0.3;
+      transform: rotate(30deg);
+      top: -25px;
+      left: 5px;
+    }
+    &:after {
+      @extend :before;
+      width: 5px;
+      left: 30px;
+    }
+  }
+  .girlcheeks {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 55px;
+    left: -25px;
+    &::before,
+    &::after {
+      display: inline-block;
+      content: "";
+      width: 20px;
+      height: 20px;
+      background: $girlskin;
+      margin: 0 20px;
+      opacity: 0.5;
+      transition: all 1s ease;
+      border-radius: 200px;
+    }
+  }
+  
+  @keyframes blink {
+    0% {
+      transform: scaleY(1);
+    }
+    18% {
+      transform: scaleY(1);
+    }
+    20% {
+      transform: scaleY(0);
+    }
+    25% {
+      transform: scaleY(1);
+    }
+    38% {
+      transform: scaleY(1);
+    }
+    40% {
+      transform: scaleY(0);
+    }
+    45% {
+      transform: scaleY(1);
+    }
+    80% {
+      transform: scaleY(1);
+    }
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    } 30% {
+      transform: scale(1.5);
+    } 100% {
+      transform: scale(1);
+    }
+  }
+
+  //girl2 
+$girl2skin: #F0BEAF;
+$girl2grey: #424B54;
+$girl2pink: #F6828C;
+@mixin border($b) {
+  border-radius: $b;
+  -webkit-border-radius: $b;
+  -moz-border-radius: $b;
+}
+
+.girl2container,
+.girl2face,
+.girl2hair,
+.girl2nose,
+.girl2ear,
+.girl2neck,
+.girl2body,
+.girl2cape,
+.girl2logo,
+.girl2group,
+.girl2fringe,
+.girl2eye,
+.girl2profile-card,
+.girl2yes,
+.girl2no,
+.girl2info,
+.girl2tongue,
+.girl2profile-wrap,
+.girl2name,
+.girl2mouth,
+.girl2eyebrow, .girl2blush {
+  position: absolute;
+}
+
+body {
+  background: #EBD8D0;
+}
+
+.girl2container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+}
+
+.girl2profile {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  @include border(100%);
+  border: 2px solid #FFF;
+  overflow: hidden;
+  background: #E8E9EB;
+}
+
+.girl2group {
+  left: -7px;
+}
+
+.girl2face {
+  @include border(100px);
+  z-index: 20;
+  top: 50px;
+  left: 70px;
+  width: 80px;
+  height: 100px;
+  background: #F0BEAF;
+}
+
+.girl2hair {
+  z-index: 3;
+  top: 30px;
+  left: 50px;
+  width: 120px;
+  height: 200px;
+  border-radius: 100px 100px 0 0;
+  background: $girl2grey;
+  &:before,
+  &:after {
+    position: absolute;
+    content: '';
+  }
+}
+
+.girl2ear {
+  z-index: 4;
+  top: 86px;
+  left: 61px;
+  width: 30px;
+  height: 30px;
+  @include border(100%);
+  background: $girl2skin;
+  display: none;
+  &:before {
+    position: absolute;
+    top: 5px;
+    left: 4px;
+    content: '';
+    width: 20px;
+    height: 20px;
+    @include border(100%);
+    background: #ED8A80;
+  }
+}
+
+.girl2ear.girl2right {
+  left: 130px;
+}
+
+.girl2fringe {
+  z-index: 99;
+  top: 53px;
+  left: 95px;
+  width: 69px;
+  height: 35px;
+  background: $girl2grey;
+  border-radius: 0 0 100px 100px;
+  transform: rotate(30deg);
+  &:before {
+    position: absolute;
+    content: '';
+    top: 5px;
+    left: -24px;
+    width: 57px;
+    height: 50px;
+    background: #424B54;
+    @include border(100%);
+    transform: rotate(10deg);
+  }
+}
+
+.girl2eyebrow {
+  z-index: 300;
+  top: 95px;
+  left: 78px;
+  width: 12px;
+  height: 2px;
+  background: #646B73;
+  @include border(3px);
+  &:before {
+    position: absolute;
+    content: '';
+    left: 50px;
+    width: 12px;
+    height: 2px;
+    background: #646B73;
+    @include border(3px);
+  }
+}
+
+.girl2eye {
+  z-index: 30;
+  top: 100px;
+  left: 80px;
+  width: 10px;
+  height: 10px;
+  background: $girl2grey;
+  @include border(100%);
+  &:before {
+    position: absolute;
+    content: '';
+    left: 50px;
+    width: 10px;
+    height: 10px;
+    background: #424B54;
+    @include border(100%);
+  }
+}
+
+
+.girl2blush {
+  z-index: 999;
+  top: 116px;
+  left: 77px;
+  width: 10px;
+  height: 7px;
+  background: #E3879E;
+  @include border(100%);
+  opacity: 0.4;
+  &:before{
+    position: absolute;
+    content: '';
+    left: 58px;
+    width: 10px;
+  height: 7px;
+  background: #E3879E;
+  @include border(100%);
+    
+  }
+}
+
+.girl2nose {
+  z-index: 20;
+  top: 100px;
+  left: 107px;
+  width: 8px;
+  height: 14px;
+  background: #DB9B99;
+  @include border(100px);
+}
+
+.girl2mouth {
+  z-index: 20;
+  top: 120px;
+  left: 97px;
+  width: 30px;
+  height: 15px;
+  border-radius: 0 0 100px 100px;
+  background: #424B54;
+  overflow: hidden;
+}
+
+.girl2tongue {
+  top: 5px;
+  left: 8px;
+  width: 30px;
+  height: 20px;
+  background: $girl2pink;
+  @include border(100%);
+}
+
+.girl2neck {
+  z-index: 13;
+  width: 30px;
+  height: 30px;
+  background: $girl2skin;
+  top: 130px;
+  left: 97px;
+  @include border(100%);
+}
+
+.girl2body {
+  z-index: 10;
+  top: 150px;
+  left: 60px;
+  width: 100px;
+  height: 150px;
+  background: #E3879E;
+  @include border(100px);
+}
+
+.girl2cape {
+  z-index: 4;
+  top: 148px;
+  left: 43px;
+  width: 130px;
+  height: 160px;
+  background: #E15554;
+  border-radius: 60px 60px 0 0;
+}
+
+.girl2logo {
+  top: 10px;
+  left: 16px;
+  width: 27px;
+  height: 15px;
+  border-bottom: 20px solid #ECD688;
+  border-left: 23px solid transparent;
+  border-right: 22px solid transparent;
+  &:before {
+    position: absolute;
+    content: '';
+    top: 35px;
+    left: -22px;
+    border-top: 40px solid #ECD688;
+    border-left: 35px solid transparent;
+    border-right: 35px solid transparent;
+  }
+}
